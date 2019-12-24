@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="author" content="Yoswaris Lawpaiboon">
+    <meta name="description" content="kiznick Countdown">
+    <meta name="keywords" content="kiznick, yoswaris, lawpaiboon, ยศวริศ, ลอไพบูลย์, 0o_kiznick_o0, Countdown, 2020, Newyear">
+    <meta property="og:site_name" content="kiznick | Countdown">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://kiznick.in.th/">
+    <meta property="og:title" content="Yoswaris Lawpaiboon">
+    <meta property="og:description" content="Just a kiznick.">
+    <meta property="og:image" content="https://cdn.kiznick.in.th/logo/fbimage.jpg">
+    <meta property="profile:first_name" content="Yoswaris">
+    <meta property="profile:last_name" content="Lawpaiboon">
+    <meta property="profile:gender" content="male">
+    <meta property="profile:username" content="kiznick">
+    <meta property="fb:profile_id" content="100005871280431">
+    <title>Kiznick | Countdown</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.kiznick.in.th/logo/logo-gold-japan.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.kiznick.in.th/logo/logo-gold-japan.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.kiznick.in.th/logo/logo-gold-japan.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://cdn.kiznick.in.th/logo/logo-gold-japan.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="https://cdn.kiznick.in.th/logo/logo-gold-japan.png" color="#2b2b2b">
+    <meta name="apple-mobile-web-app-title" content="Yoswaris Lawpaiboon">
+    <meta name="msapplication-TileImage" content="https://cdn.kiznick.in.th/logo/logo-gold-japan.png">
+    <meta name="msapplication-name" content="Yoswaris Lawpaiboon">
+    <meta name="msapplication-TileColor" content="#EBB103">
+    <meta name="theme-color" content="#EBB103">
+    <meta name="twitter:image:alt" content="Just a Image">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+</head>
+<body style="background-color: #2C2F33 !important;">
+    <header class="d-flex masthead" style="background: #2C2F33 !important;">
+        <div class="container my-auto text-center">
+			<h1 class="mb-1" id="app" style="color: #eef7fa; font-size: 2.9em"></h1>
+			<h1 class="mb-5" id="sapp" style="color: #eef7fa; font-size: 5em; display: none;">&#160;</h1>
+			<center>
+				<div class="container">
+					<div class="row" id="Countdown">
+						<div class="col" id="card-day" style="display: none;">
+							<div class="c ard text-white bg-dark mb-3" style="max-width: 18rem;">
+								<div class="card-body">
+									<h1 class="card-title" style="font-size: 10em" id="day">88</h1>
+								</div>
+								<div class="card-footer">Day</div>
+							</div>
+						</div>
+						<div class="col" id="card-hour" style="display: none;">
+							<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+								<div class="card-body">
+									<h1 class="card-title" style="font-size: 10em" id="hour">88</h1>
+								</div>
+								<div class="card-footer">Hour</div>
+							</div>
+						</div>
+						<div class="col" id="card-minute" style="display: none;">
+							<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+								<div class="card-body">
+									<h1 class="card-title" style="font-size: 10em" id="minute">88</h1>
+								</div>
+								<div class="card-footer">Minute</div>
+							</div>
+						</div>
+						<div class="col" id="card-second" style="display: none;">
+							<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+								<div class="card-body">
+									<h1 class="card-title" style="font-size: 10em" id="second">88</h1>
+								</div>
+								<div class="card-footer">Second</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</center>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col text-center text-sm-center text-md-center text-lg-center text-xl-center item social">
+						<p class="copyright" style="color: rgb(255,255,255);" id="copyright"></p>
+					</div>
+				</div>
+			</div>
+            <div class="overlay"></div>
+        </div>
+    </header>
+    <script src="https://cdn.kiznick.in.th/npm/typeit/typeit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>
+		let isHNY = 0;
+		var date = new Date;
+		$("#copyright").html('Copyright &nbsp;© <a href="https://kiznick.in.th/s/Facebook" target="_blank">Yoswaris Lawpaiboon</a> ' + date.getFullYear());
+			$(function() {
+			  var initializeWatchClock = function(id, endtime) {
+				var clock = document.getElementById(id);
+				var daysSpan = clock.querySelector('#day');
+				var hoursSpan = clock.querySelector('#hour');
+				var minutesSpan = clock.querySelector('#minute');
+				var secondsSpan = clock.querySelector('#second');
+
+				var updateWatchClock = function() {
+				  var t = getTimeRemaining(endtime);
+
+				  daysSpan.innerHTML = t.days;
+				  hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+				  minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+				  secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+				  if (t.total <= 0) {
+					clearInterval(interval);
+					if(isHNY == 0)
+					{
+						isHNY = 1;
+						$("#copyright").html('Copyright &nbsp;© <a href="https://kiznick.in.th/s/Facebook" target="_blank">Yoswaris Lawpaiboon</a> ' + date.getFullYear());
+						$('#card-day').hide(500);
+						$('#card-hour').hide(500);
+						$('#card-minute').hide(500);
+						$('#card-second').hide(500);
+						$('#sapp').show();
+						new TypeIt('#sapp', {
+							speed: 100,
+							startDelay: 900
+						})
+						.type('Happy New Years')
+						.go();
+					}
+				  }
+				}
+
+				//Update clock Watch!
+				updateWatchClock();
+				var interval = setInterval(updateWatchClock, 1000);
+			  };
+
+			  var getTimeRemaining = function(endtime) {
+				var t = Date.parse(endtime) - Date.parse(new Date());
+				var seconds = Math.floor((t / 1000) % 60);
+				var minutes = Math.floor((t / 1000 / 60) % 60);
+				var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+				var days = Math.floor(t / (1000 * 60 * 60 * 24));
+
+				return {
+				  'total': t,
+				  'days': days,
+				  'hours': hours,
+				  'minutes': minutes,
+				  'seconds': seconds
+				};
+			  };
+
+			  //Calculation for happy new year!
+			  nextYear = new Date(new Date().getFullYear() + 1, 0, 1);
+			  today = Date.parse(new Date());
+			  newYearDay = new Date(nextYear);
+			  remaningDT = newYearDay - today;
+			  remanning = new Date(Date.parse(new Date()) + remaningDT);
+
+			  initializeWatchClock('Countdown', remanning);
+			});
+
+		var date = new Date;
+		var year = date.getFullYear() + 1;
+		new TypeIt('#app', {
+			speed: 100,
+			startDelay: 900
+		})
+		.type('kiznick.in.th')
+		.pause(3000)
+		.delete()
+		.pause(250)
+		.type('Present')
+		.pause(500)
+		.type('.')
+		.pause(500)
+		.type('.')
+		.pause(500)
+		.type('.')
+		.pause(250)
+		.delete()
+		.pause(250)
+		.type('Countdown ')
+		.pause(500)
+		.type(year)
+		.pause(1000)
+		.exec(async () => {
+		  await new Promise((resolve, reject) => {
+			$(".ti-cursor").remove();
+			if(isHNY == 0)
+			{
+				$('#card-day').show(500);
+				$('#card-hour').show(500);
+				$('#card-minute').show(500);
+				$('#card-second').show(500);
+			}
+		  });
+		})
+		.go();
+	</script>
+</body>
+</html>
