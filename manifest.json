@@ -1,0 +1,19 @@
+{
+    "name": "Yoswaris Lawpaiboon",
+    "short_name": "Yoswaris",
+    "icons": [
+        {
+            "src": "https://cdn.kiznick.in.th/logo/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://cdn.kiznick.in.th/logo/logo.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#EBB103",
+    "background_color": "#EBB103",
+    "display": "standalone"
+}
