@@ -7,7 +7,6 @@
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-			
 			gtag('config', 'UA-155000615-2');
 		</script>
 		<script data-ad-client="ca-pub-1567260927401150" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -109,8 +108,8 @@
 			let isHNY = 0;
 			var date = new Date;
 			$("#copyright").html('Copyright &nbsp;© <a href="https://kiznick.in.th/s/Facebook" target="_blank">Yoswaris Lawpaiboon</a> ' + date.getFullYear());
-				$(function() {
-				  var initializeWatchClock = function(id, endtime) {
+			$(function() {
+				var initializeWatchClock = function(id, endtime) {
 					var clock = document.getElementById(id);
 					var daysSpan = clock.querySelector('#day');
 					var hoursSpan = clock.querySelector('#hour');
@@ -118,40 +117,49 @@
 					var secondsSpan = clock.querySelector('#second');
 
 					var updateWatchClock = function() {
-					  var t = getTimeRemaining(endtime);
+						var t = getTimeRemaining(endtime);
 
-					  daysSpan.innerHTML = t.days;
-					  hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-					  minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-					  secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-					  if (t.total <= 0) {
-						clearInterval(interval);
-						if(isHNY == 0)
+						daysSpan.innerHTML = t.days;
+						hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+						minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+						secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+						
+						if(t.days == 0)
 						{
-							isHNY = 1;
-							$("#copyright").html('Copyright &nbsp;© <a href="https://kiznick.in.th/s/Facebook" target="_blank">Yoswaris Lawpaiboon</a> ' + date.getFullYear());
-							$('#card-day').hide(500);
-							$('#card-hour').hide(500);
-							$('#card-minute').hide(500);
-							$('#card-second').hide(500);
-							$('#sapp').show();
-							new TypeIt('#sapp', {
-								speed: 100,
-								startDelay: 900
-							})
-							.type('Happy New Years')
-							.go();
+							if(t.hours == 0)
+							{
+								$('#card-hour').remove();
+								if(t.minutes == 0)
+								{
+									$('#card-minute').remove();
+								}
+							}
+							$('#card-day').remove();
 						}
-					  }
+						
+						if (t.total <= 0) {
+							clearInterval(interval);
+							if (isHNY == 0) {
+								isHNY = 1;
+								$("#copyright").html('Copyright &nbsp;© <a href="https://kiznick.in.th/s/Facebook" target="_blank">Yoswaris Lawpaiboon</a> ' + date.getFullYear());
+								$('#card-second').hide(500);
+								$('#sapp').show();
+								new TypeIt('#sapp', {
+										speed: 100,
+										startDelay: 900
+									})
+									.type('Happy New Years')
+									.go();
+							}
+						}
 					}
 
 					//Update clock Watch!
 					updateWatchClock();
 					var interval = setInterval(updateWatchClock, 1000);
-				  };
+				};
 
-				  var getTimeRemaining = function(endtime) {
+				var getTimeRemaining = function(endtime) {
 					var t = Date.parse(endtime) - Date.parse(new Date());
 					var seconds = Math.floor((t / 1000) % 60);
 					var minutes = Math.floor((t / 1000 / 60) % 60);
@@ -159,61 +167,60 @@
 					var days = Math.floor(t / (1000 * 60 * 60 * 24));
 
 					return {
-					  'total': t,
-					  'days': days,
-					  'hours': hours,
-					  'minutes': minutes,
-					  'seconds': seconds
+						'total': t,
+						'days': days,
+						'hours': hours,
+						'minutes': minutes,
+						'seconds': seconds
 					};
-				  };
+				};
 
-				  //Calculation for happy new year!
-				  nextYear = new Date(new Date().getFullYear() + 1, 0, 1);
-				  today = Date.parse(new Date());
-				  newYearDay = new Date(nextYear);
-				  remaningDT = newYearDay - today;
-				  remanning = new Date(Date.parse(new Date()) + remaningDT);
+				//Calculation for happy new year!
+				nextYear = new Date(new Date().getFullYear() + 1, 0, 1);
+				today = Date.parse(new Date());
+				newYearDay = new Date(nextYear);
+				remaningDT = newYearDay - today;
+				remanning = new Date(Date.parse(new Date()) + remaningDT);
 
-				  initializeWatchClock('Countdown', remanning);
-				});
+				initializeWatchClock('Countdown', remanning);
+			});
 
 			var date = new Date;
 			var year = date.getFullYear() + 1;
 			new TypeIt('#app', {
-				speed: 100,
-				startDelay: 900
-			})
-			.type('kiznick.in.th')
-			.pause(3000)
-			.delete()
-			.pause(250)
-			.type('Present')
-			.pause(500)
-			.type('.')
-			.pause(500)
-			.type('.')
-			.pause(500)
-			.type('.')
-			.pause(250)
-			.delete()
-			.pause(250)
-			.type('Countdown ')
-			.pause(500)
-			.type(year)
-			.pause(1000)
-			.exec(async () => {
-			  await new Promise((resolve, reject) => {
-				$(".ti-cursor").remove();
-				if(isHNY == 0)
-				{
-					$('#card-day').show(500);
-					$('#card-hour').show(500);
-					$('#card-minute').show(500);
-					$('#card-second').show(500);
-				}
-			  });
-			})
-			.go();
+					speed: 100,
+					startDelay: 900
+				})
+				.type('kiznick.in.th')
+				.pause(3000)
+				.delete()
+				.pause(250)
+				.type('Present')
+				.pause(500)
+				.type('.')
+				.pause(500)
+				.type('.')
+				.pause(500)
+				.type('.')
+				.pause(250)
+				.delete()
+				.pause(250)
+				.type('Countdown ')
+				.pause(500)
+				.type(year)
+				.pause(1000)
+				.exec(async () => {
+					await new Promise((resolve, reject) => {
+						$(".ti-cursor").remove();
+						if (isHNY == 0) {
+							$('#card-day').show(500);
+							$('#card-hour').show(500);
+							$('#card-minute').show(500);
+							$('#card-second').show(500);
+						}
+					});
+				})
+				.go();
 		</script>
 	</body>
 </html>
